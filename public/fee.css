@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.feetext{
+    margin-top:40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.tableview
+{
+    margin-bottom: 50px;
+}
+.tableview thead
+{
+    background-color: #093a86;
+    color:white;
+    font-size: 17px;
+    font-weight: bold;
+}
+.tableview tbody
+{
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.footer
+{
+   height: 210px;
+   background-color: #093a86;
+   color:white;
+    
+}
+.leftfooter
+{
+    margin: auto;
+    padding-left: 100px;
+}
+.leftfooter img
+{
+    width:150px;
+    height: 100px;
+}
+.middlefooter
+{
+    margin: auto;
+    padding-left: 100px;
+}
+.middlefooter ul{
+    margin-left:30px;
+}
+.rightfooter
+{
+    margin-top:55px;;
+    padding-left: 100px;
+}
+
+
+ 

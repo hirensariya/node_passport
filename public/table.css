@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.tableview
+{
+    margin-top:10px;
+    margin-bottom: 50px;
+}
+
+.tableview thead
+{
+    background-color: #093a86;
+    color:white;
+    font-size: 17px;
+    font-weight: bold;
+}
+.tableview tbody
+{
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+

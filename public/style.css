@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.menu
+{
+   
+    height: 100px;
+    background-color: #093a86 ;
+    color: #ffffff;
+    
+
+}
+.menu .left
+{
+    margin-top: 2%;
+    margin-left: 2%;
+
+}
+.item
+{
+    margin-top: 55px;
+}
+
+.item span
+{
+    color:#ffffff;
+    background-color: #ffffff;
+
+}
+.cmenu
+{
+    margin-top: 120px;
+    display:none;
+}
+.bcmenu
+{
+    background-color: #093a86;
+}
+.main
+{
+   margin-left: 40px;
+    background-color: blue;
+    height: 200px;
+    width: 95%;
+    margin-top: 60px;
+    border-radius: 20px;
+    color:white;
+
+}
+.main .upper .icon
+{
+   margin-top: 60px;
+    margin-left: 50px; 
+    height: 0px;
+    width: 50px;
+}
+
+.main .upper .type
+{
+    margin-left: 130px;
+    
+}
+.main .lower
+{
+    margin-left: 300px;
+}
+.main .lower button
+{
+   
+    width: 150px; 
+    border-radius: 20px;
+}
+.main .pay h3{
+    margin-left: 290px;
+     margin-top:20px;
+ }
+ .main .pay .photo img
+ {
+     height: 100px;
+    margin-left: 200px;
+ }
+ .banner{
+    justify-content: center;
+    margin-top:30px;
+}
+.heading {
+    font:1200;
+    margin-left: 500px;
+}
+.content
+{
+    margin-top: 40px;
+}
+.banner .lefttype img 
+{
+    height: 300px;
+    width: 600px;
+}
+.silder
+{
+    margin-top:20px;
+}
+
+.silder img
+{
+    height: 500px;
+    width: 200px;
+    background-color: white;
+}
+.righttype
+{
+    margin-top: 10px;
+}
+.footer
+{
+   height: 210px;
+   background-color: #093a86;
+   color:white;
+    
+}
+.leftfooter
+{
+    margin: auto;
+    padding-left: 100px;
+}
+.leftfooter img
+{
+    width:150px;
+    height: 100px;
+}
+.middlefooter
+{
+    margin: auto;
+    padding-left: 100px;
+}
+.middlefooter ul{
+    margin-left:30px;
+}
+.middlefooter ul a{
+    color:white;
+}
+.rightfooter
+{
+    margin-top:55px;;
+    padding-left: 100px;
+}
+
+
+
+
+@media(max-width: 800px)
+{
+ .menu
+{
+   
+    height: 100% !important;
+    background-color: #093a86 ;
+    color: #ffffff;
+    position: block;
+
+}
+.menu .left
+{
+    margin-top: 35px;
+    margin-left: 35px;
+
+}
+
+
+.item
+{
+    margin-top: 0px;
+    display: none;
+    
+}
+.cmenu
+{
+    margin-top: 0px;
+   
+    
+}
+
+.main
+{
+   margin-left: 7px;
+    background-color: blue;
+    height: 500px;
+    width: 95%;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.main .upper .icon
+{
+   margin-top: 30px;
+    margin-left: 20px; 
+    height: 80px;
+    width: 10px;
+}
+
+.main .upper .type
+{
+    margin-left: 0px;
+    
+}
+.main .lower
+{
+    margin-left: 0px;
+}
+.main .lower button
+{
+   
+    width: 150px; 
+    border-radius: 20px;
+}
+.main .pay h3{
+    margin-left: 30px;
+     margin-top:20px;
+ }
+ .main .pay .photo img
+ {
+     height: 70px;
+     margin: 0px;
+ }
+.heading {
+    margin-left: 0px;
+}
+.banner .content .lefttype img 
+{
+    height: 300px;
+    width: 300px;
+}
+
+.silder img
+{
+    height: 300px;
+}
+
+
+.footer
+{
+   height: 600px !important;
+   background-color: #093a86;
+   color:white;
+    
+}
+.leftfooter
+{
+    margin: -25px;
+   
+}
+.leftfooter img
+{
+    margin-left: -10px;
+    width:200px;
+    height:150px;
+}
+.middlefooter
+{
+    margin: -15px;
+   
+}
+
+.rightfooter
+{
+    margin-top:0px;
+    margin: -25px;
+   
+}
+
+
+
+}
+@media(min-width: 700px) and (max-width: 1200px)
+{
+    .menu
+    {
+       
+        height: 150px;
+        background-color: #093a86 ;
+        color: #ffffff;
+    
+    }
+    .item
+{
+    margin-top: 0px;
+    
+}
+.main
+    {
+        height: 350px;
+    }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head.ejs') %> 
+    </head>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+
+<div class="tableview table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th> Id <h1>         </h1>
+                </th>
+                <th> Applying for <h1>         </h1>
+                </th>
+                <th>Type of Application </th>
+
+                <th>Type of Passport
+                    Booklet</th>
+
+                <th> Name <h1>         </h1>
+                </th>
+                <th> Phone <h1>         </h1>
+                </th>
+                <th> Age<h1>         </h1></th>
+
+                <th> Promo <h1>         </h1>
+                </th>
+                <th> Date/time <h1>         </h1>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody> 
+            <% data.forEach(data => { %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.application_for %></td>
+                <td><%= data.application_type %></td>
+                <td><%= data.application_booklet %></td>
+                <td><%= data.application_name %></td>
+                <td><%= data.application_phone %></td>
+                <td><%= data.application_age %></td>
+                <td><%= data.promo %></td>
+                <td><%= data.createdAt %></td>
+            </tr>
+            <% })  %> 
+        </tbody>
+      </table>
+      
+      <%- include('./partials/footer.ejs') %> 
+</div>
+</body>
