@@ -14,6 +14,7 @@ const control_post = (req, res) => {
       });
 }
 
+
 const control_main = (req, res) => {
     const mainform = new Mainform(req.body);
     mainform.save()
