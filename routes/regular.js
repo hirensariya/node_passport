@@ -38,4 +38,11 @@ app.get('/', function (req, res) {
       title: "pop",
     })
   });
+
+
+  app.get('/*', function (req, res) {
+    res.render('404', {
+      title: "404",
+    })
+  });
 module.exports = app;

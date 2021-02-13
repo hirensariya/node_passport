@@ -19,7 +19,7 @@ const control_main = (req, res) => {
     const mainform = new Mainform(req.body);
     mainform.save()
       .then(result => {
-        res.redirect('table');
+        res.redirect('index');
       })
       .catch(err => {
           console.log(err);
