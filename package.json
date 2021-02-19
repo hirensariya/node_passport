@@ -19,7 +19,8 @@
     "forever": "^3.0.4",
     "git": "^0.1.5",
     "mongoose": "^5.11.10",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "robots.txt": "^1.1.0"
   },
   "devDependencies": {},
   "description": ""

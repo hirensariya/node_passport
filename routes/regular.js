@@ -1,4 +1,5 @@
 const express = require('express');
+var robots = require('robots.txt')
 const app = express();
 
 app.get('/', function (req, res) {
@@ -17,7 +18,7 @@ app.get('/', function (req, res) {
   app.get('/document', function (req, res) {
     res.render('document', {
       title: "Check the Required Documents for Passport Application - passportservice.in",
-      descrition:"Meta Description - Documents Required for Applying Passport Online. Must Require Documents - Proof of Identity Aadhar Card, Pan Card, Driving License, Birth Certificate, e.t.c",
+      descrition:"Meta Description - Documents Required for Applying Passport Online. Must Require Documents - Proof of Identity Aadhar Card, Pan Card, Drivingicense, Birth Certificate, e.t.c",
     })
   });
   app.get('/fee', function (req, res) {
@@ -45,7 +46,8 @@ app.get('/', function (req, res) {
       title: "pop",
     })
   });
-
+ 
+  // app.use(robots(__dirname + '/robots.txt'))
 
   app.get('/*', function (req, res) {
     res.render('404', {
