@@ -12,23 +12,31 @@ body{
 .menu
 {
    
-    height: 100px;
+    height: 125px;
     background-color: #093a86 ;
     color: #ffffff;
     
 
 }
-.menu .left
+.menu .left img
 {
-    margin-top: 2%;
-    margin-left: 2%;
+    margin-left:30px;
+    width:200px;
+    height: 150px;
 
 }
 .item
 {
-    margin-top: 55px;
+    margin-left: 25rem;
+    margin-top:-4rem;
     
 }
+.item .btn
+{
+    height:2.5rem;
+    
+}
+
 
 
 .item span
@@ -173,9 +181,17 @@ margin-left:10px;
     position: block;
 
 }
+.menu .left img
+{
+    /* margin-left:-3rem; */
+    margin:auto;
+    width:250px;
+    height: 150px;
+
+}
 .menu .left
 {
-    margin-top: 35px;
+    margin-top:15px;
     margin-left: 35px;
 
 }
@@ -189,12 +205,17 @@ margin-left:10px;
 }
 .cmenu
 {
-    margin-top: 0px;
+    margin-top: 0rem;
 }
 .ccm
 {
-    
-    width: 50vh;
+    width: 40vh;
+}
+
+.bcmenu
+{
+    margin: auto;
+    margin-left:18px;
 }
 
 .main
@@ -280,7 +301,7 @@ margin-left:10px;
 .rightfooter
 {
    margin-top: 0px !important;
-   margin-left: 2px !important;
+   margin-left: 1px !important;
    
 }
 .rightfooter .fa

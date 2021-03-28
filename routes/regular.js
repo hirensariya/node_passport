@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
     })
   });
   
-  app.get('/about', function (req, res) {
+  app.get('/contact', function (req, res) {
     res.render('about', {
       title: "Contact Us for Online Passport Services - Passportservice.in",
       descrition:"Meta Description - For more information about Online Passport Application Form & Passport services, Please call us and Email Us to Get Your Queries Answered.",
