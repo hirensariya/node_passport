@@ -22,14 +22,18 @@ const serviceSchema = new Schema({
     type: Number,
     required: true
   },
+  application_email: {
+    type: String,
+    required: true
+  },
   application_age: {
     type: Number,
     required: true
-    },
-    promo: {
-        type: String,
-        required: true
-      }
+  },
+  amount: {
+      type: String,
+      required: true
+    }
 }, { timestamps: true });
 
 const Service = mongoose.model('Service', serviceSchema);

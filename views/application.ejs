@@ -14,7 +14,7 @@
 
 
 
-                    <form action="">
+                    <form action="/set" method="POST">
                         <div class="container m-auto">
                             <div class="mainapp">
                                 <div class="row">
@@ -23,8 +23,8 @@
                                             <label for="applying-for">Applying
                                                 for</label>
                                             <select class="form-control"
-                                                id="applying-for"
-                                                name="applying-for"
+                                                id="application_for"
+                                                name="application_for"
                                                 onchange="dis()">
                                                 <option value="fresh">New /
                                                     Fresh
@@ -42,7 +42,7 @@
                                                 Application</label>
                                             <select class="form-control"
                                                 id="type-of-application"
-                                                name="type-of-application" onchange="custom()">
+                                                name="application_type" onchange="custom()">
                                                 <option value="normal">Normal</option>
                                                 <option value="tatkaal">Tatkaal</option>
                                                 
@@ -58,7 +58,7 @@
                                                 Booklet</label>
                                             <select class="form-control"
                                                 id="type-of-passport-booklet"
-                                                name="type-of-passport-booklet">
+                                                name="application_booklet">
                                                 <option value="36-pages">36
                                                     Pages</option>
                                                 <option value="60-pages">60
@@ -231,7 +231,7 @@
                                                     Full Name
                                                     <em>*</em></label>
                                                 <input type="text"
-                                                    name="applicant-name"
+                                                    name="application_name"
                                                     id="applicant-name"
                                                     class="form-control"
                                                     placeholder="Applicant's Full
@@ -244,7 +244,7 @@
                                             <div class="form-group">
                                                 <label for="phone">Phone no.
                                                     <em>*</em></label>
-                                                <input type="text" name="phone"
+                                                <input type="text" name="application_phone"
                                                     id="applicant-name"
                                                     class="form-control"
                                                     placeholder="Enter Phone No"
@@ -257,7 +257,7 @@
                                             <div class="form-group">
                                                 <label for="email">Email
                                                     <em>*</em></label>
-                                                <input type="text" name="email"
+                                                <input type="text" name="application_email"
                                                     id="applicant-name"
                                                     class="form-control"
                                                     placeholder="Enter Email"
@@ -270,7 +270,7 @@
                                             <div class="form-group">
                                                 <label for="age">Age
                                                     <em>*</em></label>
-                                                <input type="text" name="age" onkeydown="price()"
+                                                <input type="text" name="application_age" onkeydown="price()"
                                                     id="age"
                                                     class="form-control"
                                                     placeholder="Enter Age"
@@ -287,8 +287,7 @@
                                         <input type="text" name="price"
                                             id="price"
                                             class="form-control"
-                                            placeholder="Amount"  disabled/>
-                                       
+                                            placeholder="Amount" value="" disabled/>
                                     </div>
                                     
                                 </div>
@@ -301,6 +300,10 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" name="amount"
+                        id="amount"
+                        class="form-control"
+                        placeholder="Amount" value=""/>
                     </form>
 
 
@@ -371,6 +374,7 @@ if(a=="normal" && b=="36-pages" && c > 18)
 } 
 // document.getElementById('discount_code2').value= price-e;
 document.getElementById('price').value= price;
+document.getElementById('amount').value= price;
 // document.getElementById("submit-online-passport").style.visibility = "visible";
 // document.getElementById('promo').value = "";
 
