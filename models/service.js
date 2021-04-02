@@ -4,15 +4,15 @@ const Schema = mongoose.Schema;
 const serviceSchema = new Schema({
   application_for: {
     type: String,
-    required: true,
+    // required: true,
   },
   application_type: {
     type: String,
-    required: true,
+    // required: true,
   },
   application_booklet: {
     type: String,
-    required: true
+    // required: true
   },
   application_name: {
     type: String,
@@ -30,10 +30,6 @@ const serviceSchema = new Schema({
     type: Number,
     required: true
   },
-  amount: {
-      type: String,
-      required: true
-    }
 }, { timestamps: true });
 
 const Service = mongoose.model('Service', serviceSchema);

@@ -88,6 +88,14 @@ body{
     width: 150px; 
     border-radius: 20px;
 }
+.main .lowersecond
+{
+   
+    width: 150px; 
+    border-radius: 20px;
+    margin: auto; 
+    margin-left: 4rem;
+}
 .main .pay h3{
     margin-left: 290px;
      margin-top:20px;
@@ -96,6 +104,11 @@ body{
  {
      height: 100px;
     margin-left: 200px;
+ }
+ .main .homeform
+ {
+     width: 40%;
+     margin: auto;
  }
  .banner{
     justify-content: center;
@@ -195,7 +208,19 @@ margin-left:10px;
     margin-left: 35px;
 
 }
-
+.main .homeform
+{
+    width: 100%;
+    margin: auto;
+}
+.main .lowersecond
+{
+   
+    width: 150px; 
+    border-radius: 20px;
+    margin: auto; 
+    margin-left: 5rem;
+}
 
 .item
 {

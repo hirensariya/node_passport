@@ -1,394 +1,272 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <%- include('./partials/head.ejs') %>
-        </head>
 
-        <style>
-   
-  </style>
-        <body>
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
 
-            <div class="container-fluid">
-                <%- include('./partials/nav.ejs') %>
+<style>
 
+</style>
 
+<body>
 
-                    <form action="/set" method="POST">
-                        <div class="container m-auto">
-                            <div class="mainapp">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="applying-for">Applying
-                                                for</label>
-                                            <select class="form-control"
-                                                id="application_for"
-                                                name="application_for"
-                                                onchange="dis()">
-                                                <option value="fresh">New /
-                                                    Fresh
-                                                    Passport</option>
-                                                <option value="reissue">Reissue
-                                                    Passport</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="type-of-application">Type
-                                                of
-                                                Application</label>
-                                            <select class="form-control"
-                                                id="type-of-application"
-                                                name="application_type" onchange="custom()">
-                                                <option value="normal">Normal</option>
-                                                <option value="tatkaal">Tatkaal</option>
-                                                
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label
-                                                for="type-of-passport-booklet">Type
-                                                of Passport
-                                                Booklet</label>
-                                            <select class="form-control"
-                                                id="type-of-passport-booklet"
-                                                name="application_booklet">
-                                                <option value="36-pages">36
-                                                    Pages</option>
-                                                <option value="60-pages">60
-                                                    Pages</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12" id="custom-msg"
-                                    style="display: none;">
-                                    <div class="col-md-12 col-xl-12">
-                                        <h3><strong>Note :</strong> In case of
-                                            TatKaal application,
-                                            Additional fees of Rs.2000 will
-                                            required to pay at Passport
-                                            Office in Cash.
-                                            For Tatkal you need at list 2 Id
-                                            Proof and 3 Address Proof
-                                            and If you are Divorced, Separated
-                                            or Widow You are not
-                                            eligible for Tatkal Service.</h3>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-xl-12"
-                                    id="reissue" style="display: none;">
-                                    <div class="col-md-12">
-                                        <label>Specify reason(s) <em>*</em></label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 col-xl-4">
-                                            <div class="form-group">
-                                                <label
-                                                    for="passport_reason_1">
-                                                    <input type="radio"
-                                                        name="passport_reason"
-                                                        value="Validity
-                                                        Expired
-                                                        within 3 years/Due
-                                                        to
-                                                        Expire"
-                                                        id="passport_reason_1"
-                                                        /> Validity Expired
-                                                    within 3
-                                                    years/Due to Expire
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 col-xl-4">
-                                            <div class="form-group">
-                                                <label
-                                                    for="passport_reason_2">
-                                                    <input type="radio"
-                                                        name="passport_reason"
-                                                        value="Validity
-                                                        Expired
-                                                        more than 3 years
-                                                        ago"
-                                                        id="passport_reason_2"
-                                                        /> Validity Expired
-                                                    more
-                                                    than
-                                                    3 years ago </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label
-                                                    for="passport_reason_3">
-                                                    <input type="radio"
-                                                        name="passport_reason"
-                                                        value="Exhaustion of
-                                                        Pages"
-                                                        id="passport_reason_3"
-                                                        /> Exhaustion of
-                                                    Pages
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div style="clear: both;"></div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label
-                                                    for="passport_reason_4">
-                                                    <input type="radio"
-                                                        name="passport_reason"
-                                                        value="Lost
-                                                        Passport"
-                                                        id="passport_reason_4"
-                                                        /> Lost
-                                                    Passport </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label
-                                                    for="passport_reason_5">
-                                                    <input type="radio"
-                                                        name="passport_reason"
-                                                        value="Damaged
-                                                        Passport"
-                                                        id="passport_reason_5"
-                                                        />
-                                                    Damaged Passport
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label
-                                                    for="passport_reason_6">
-                                                    <input type="checkbox"
-                                                        name="passport_reason"
-                                                        value="Change in
-                                                        Existing Personal
-                                                        Particulars"
-                                                        id="passport_reason_6"
-                                                        /> Change in
-                                                    Existing
-                                                    Personal Particulars
-                                                </label>
-                                            </div>
-                                        </div>
+    <div class="container-fluid">
+        <%- include('./partials/nav.ejs') %>
 
 
-                                        <div class="col-md-4"
-                                            id="reason_date"
-                                            style="display: none;">
-                                            <div class="form-group">
-                                                <label for="date-of-expiry">Date
-                                                    of Expiry
-                                                    <em>*</em></label>
-                                                <input type="date"
-                                                    name="date-of-expiry"
-                                                    class="form-control"
-                                                    placeholder="Applicant
-                                                    First
-                                                    Name" />
-                                            </div>
-                                        </div>
 
-                                        <div class="col-md-4"
-                                            id="reason_select"
-                                            style="display: none;">
-                                            <div class="form-group">
-                                                <label
-                                                    for="has-passport-expired">Has
-                                                    your Passport Expired?
-                                                    <em>*</em></label>
-                                                <select class="form-control"
-                                                    id="has-passport-expired"
-                                                    name="has-passport-expired">
-                                                    <option value="">Select</option>
-                                                    <option value="normal">No</option>
-                                                    <option value="tatkaal">Yes</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <div class="form-group">
-                                                <label for="applicant-name">Applicant's
-                                                    Full Name
-                                                    <em>*</em></label>
-                                                <input type="text"
-                                                    name="application_name"
-                                                    id="applicant-name"
-                                                    class="form-control"
-                                                    placeholder="Applicant's Full
-                                                    Name" required="required" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <div class="form-group">
-                                                <label for="phone">Phone no.
-                                                    <em>*</em></label>
-                                                <input type="text" name="application_phone"
-                                                    id="applicant-name"
-                                                    class="form-control"
-                                                    placeholder="Enter Phone No"
-                                                    required="required" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <div class="form-group">
-                                                <label for="email">Email
-                                                    <em>*</em></label>
-                                                <input type="text" name="application_email"
-                                                    id="applicant-name"
-                                                    class="form-control"
-                                                    placeholder="Enter Email"
-                                                    required="required" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <div class="form-group">
-                                                <label for="age">Age
-                                                    <em>*</em></label>
-                                                <input type="text" name="application_age" onkeydown="price()"
-                                                    id="age"
-                                                    class="form-control"
-                                                    placeholder="Enter Age"
-                                                    required="required"
-                                                    />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            <form action="/set" method="POST">
+                <div class="container m-auto">
+                    <div class="mainapp">
+                        <div class="row">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <label for="Price">Amount To Pay
-                                        </label>
-                                        <input type="text" name="price"
-                                            id="price"
-                                            class="form-control"
-                                            placeholder="Amount" value="" disabled/>
-                                    </div>
-                                    
+                                    <label for="applying-for">Applying
+                                        for</label>
+                                    <select class="form-control" id="application_for" name="application_for"
+                                        onchange="dis()">
+                                        <option value="fresh">New /
+                                            Fresh
+                                            Passport</option>
+                                        <option value="reissue">Reissue
+                                            Passport</option>
+                                    </select>
                                 </div>
-                                
-                                <div style="background-color:#093a86">
-                                    <input type="submit" name="submit"
-                                        id="submit-online-passport" class="btn
-                                        form-control m-auto" value="Validate & Pay
-                                        Pay Securely" style="color:white"/>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="type-of-application">Type
+                                        of
+                                        Application</label>
+                                    <select class="form-control" id="type-of-application" name="application_type"
+                                        onchange="custom()">
+                                        <option value="normal">Normal</option>
+                                        <option value="tatkaal">Tatkaal</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="type-of-passport-booklet">Type
+                                        of Passport
+                                        Booklet</label>
+                                    <select class="form-control" id="type-of-passport-booklet"
+                                        name="application_booklet">
+                                        <option value="36-pages">36
+                                            Pages</option>
+                                        <option value="60-pages">60
+                                            Pages</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" name="amount"
-                        id="amount"
-                        class="form-control"
-                        placeholder="Amount" value=""/>
-                    </form>
+
+                        <div class="col-md-12" id="custom-msg" style="display: none;">
+                            <div class="col-md-12 col-xl-12">
+                                <h3><strong>Note :</strong> In case of
+                                    TatKaal application,
+                                    Additional fees of Rs.2000 will
+                                    required to pay at Passport
+                                    Office in Cash.
+                                    For Tatkal you need at list 2 Id
+                                    Proof and 3 Address Proof
+                                    and If you are Divorced, Separated
+                                    or Widow You are not
+                                    eligible for Tatkal Service.</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xl-12" id="reissue" style="display: none;">
+                            <div class="col-md-12">
+                                <label>Specify reason(s) <em>*</em></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-xl-4">
+                                    <div class="form-group">
+                                        <label for="passport_reason_1">
+                                            <input type="radio" name="passport_reason" value="Validity
+                                                        Expired
+                                                        within 3 years/Due
+                                                        to
+                                                        Expire" id="passport_reason_1" /> Validity Expired
+                                            within 3
+                                            years/Due to Expire
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-xl-4">
+                                    <div class="form-group">
+                                        <label for="passport_reason_2">
+                                            <input type="radio" name="passport_reason" value="Validity
+                                                        Expired
+                                                        more than 3 years
+                                                        ago" id="passport_reason_2" /> Validity Expired
+                                            more
+                                            than
+                                            3 years ago </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="passport_reason_3">
+                                            <input type="radio" name="passport_reason" value="Exhaustion of
+                                                        Pages" id="passport_reason_3" /> Exhaustion of
+                                            Pages
+                                        </label>
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="passport_reason_4">
+                                            <input type="radio" name="passport_reason" value="Lost
+                                                        Passport" id="passport_reason_4" /> Lost
+                                            Passport </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="passport_reason_5">
+                                            <input type="radio" name="passport_reason" value="Damaged
+                                                        Passport" id="passport_reason_5" />
+                                            Damaged Passport
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="passport_reason_6">
+                                            <input type="checkbox" name="passport_reason" value="Change in
+                                                        Existing Personal
+                                                        Particulars" id="passport_reason_6" /> Change in
+                                            Existing
+                                            Personal Particulars
+                                        </label>
+                                    </div>
+                                </div>
 
 
+                                <div class="col-md-4" id="reason_date" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="date-of-expiry">Date
+                                            of Expiry
+                                            <em>*</em></label>
+                                        <input type="date" name="date-of-expiry" class="form-control" placeholder="Applicant
+                                                    First
+                                                    Name" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4" id="reason_select" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="has-passport-expired">Has
+                                            your Passport Expired?
+                                            <em>*</em></label>
+                                        <select class="form-control" id="has-passport-expired"
+                                            name="has-passport-expired">
+                                            <option value="">Select</option>
+                                            <option value="normal">No</option>
+                                            <option value="tatkaal">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="applicant-name">Applicant's Full Name
+                                            <em>*</em></label>
+                                        <input type="text" name="application_name" id="applicant-name"
+                                            class="form-control" placeholder="Applicant'sFull  Name" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="phone">Phone no.
+                                            <em>*</em></label>
+                                        <input type="text" name="application_phone" id="applicant-name"
+                                            class="form-control" placeholder="Enter Phone No" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="email">Email
+                                            <em>*</em></label>
+                                        <input type="text" name="application_email" id="applicant-name"
+                                            class="form-control" placeholder="Enter Email" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="age">Age
+                                            <em>*</em></label>
+                                        <input type="text" name="application_age" id="age"
+                                            class="form-control" placeholder="Enter Age" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background-color:#093a86" class="mb-4">
+                        <input type="submit" name="submit" id="submit-online-passport" class="btn
+                                        form-control m-auto" value="submit
+                                        Pay Securely" style="color:white" />
+                    </div>
                 </div>
-                <%- include('./partials/footer.ejs') %>
+    </div>
+    <input type="hidden" name="amount" id="amount" class="form-control" placeholder="Amount" value="" />
+    </form>
 
 
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
 
 
-                    <script
-                        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                        crossorigin="anonymous"></script>
-                    <script
-                        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-                        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-                        crossorigin="anonymous"></script>
+</body>
+
+</html>
 
 
-                </body>
-            </html>
-
-
-            <script>
-                document.getElementById("age").addEventListener("input", price);
-                function dis()
-                {
-                    a = document.getElementById('applying-for').value;
-                    if(a=="reissue")
-                    {
-                        document.getElementById("reissue").style.display = "block";
-                    }       
-                    else{
-                        document.getElementById("reissue").style.display = "none";
-                    }
-                }
-                function price() {
-  var a,b,c,price;
-  // Get the value of the input field with id="numb"
-  a = document.getElementById('type-of-application').value;
-  b = document.getElementById('type-of-passport-booklet').value;
-  c = document.getElementById('age').value;
- 
-if(a=="normal" && b=="36-pages" && c > 18)
-{
-    price=3500;
-} else if(a=="tatkaal" && b=="36-pages" && c > 18)
-{
-    price=4000;
-} else if(a=="normal" && b=="60-pages" && c > 18)
-{
-    price=4000;
-} else if(a=="tatkaal" && b=="60-pages" && c > 18)
-{
-    price=4500;
-} else if(a=="normal" && b=="36-pages" && c < 18)
-{
-    price=3000;
-} else if(a=="tatkaal" && b=="36-pages" && c < 18)
-{
-    price=3500;
-} else if(a=="normal" && b=="60-pages" && c < 18)
-{
-    price=3500;
-} else
-{
-    price=4000;
-} 
-// document.getElementById('discount_code2').value= price-e;
-document.getElementById('price').value= price;
-document.getElementById('amount').value= price;
-// document.getElementById("submit-online-passport").style.visibility = "visible";
-// document.getElementById('promo').value = "";
-
-
-}
-function custom()
-{
-    a = document.getElementById('type-of-application').value;
-                    if(a=="tatkaal")
-                    {
-                        document.getElementById("custom-msg").style.display = "block";
-                    }       
-                    else{
-                        document.getElementById("custom-msg").style.display = "none";
-                    }
-}
-            </script>
+<script>
+    function dis() {
+        a = document.getElementById('application-for').value;
+        if (a == "reissue") {
+            document.getElementById("reissue").style.display = "block";
+        }
+        else {
+            document.getElementById("reissue").style.display = "none";
+        }
+    }
+    function custom() {
+        a = document.getElementById('type-of-application').value;
+        if (a == "tatkaal") {
+            document.getElementById("custom-msg").style.display = "block";
+        }
+        else {
+            document.getElementById("custom-msg").style.display = "none";
+        }
+    }
+</script>
