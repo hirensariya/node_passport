@@ -154,22 +154,7 @@ body{
     margin: auto;
     padding-left: 100px;
 }
-.leftfooter img
-{
-    width:150px;
-    height: 100px;
-}
-.middlefooter
-{
-    margin: auto;
-    padding-left: 100px;
-}
-.middlefooter ul{
-    margin-left:30px;
-}
-.middlefooter ul a{
-    color:white;
-}
+
 .rightfooter
 {
     margin-top:55px;;
@@ -181,7 +166,10 @@ margin-left:10px;
 }
 
 
-
+.mainapp
+{
+    margin-top: 1rem;
+}
 
 @media(max-width: 800px)
 {
@@ -196,10 +184,10 @@ margin-left:10px;
 }
 .menu .left img
 {
-    /* margin-left:-3rem; */
+    margin-top:-3rem;
     margin:auto;
     width:250px;
-    height: 150px;
+    height:150px;
 
 }
 .menu .left
@@ -236,11 +224,10 @@ margin-left:10px;
 {
     width: 40vh;
 }
-
 .bcmenu
 {
     margin: auto;
-    margin-left:18px;
+    margin-left:1rem;
 }
 
 .main
@@ -249,7 +236,7 @@ margin-left:10px;
     background-color: blue;
     height: 500px;
     width: 95%;
-    margin-top: 50px;
+    margin-top: 0px;
     border-radius: 20px;
 }
 .main .upper .icon
@@ -275,15 +262,6 @@ margin-left:10px;
     width: 150px; 
     border-radius: 20px;
 }
-.main .pay h3{
-    margin-left: 30px;
-     margin-top:20px;
- }
- .main .pay .photo img
- {
-     height: 70px;
-     margin: 0px;
- }
 .heading {
     margin-left: 0px;
 }
@@ -295,32 +273,20 @@ margin-left:10px;
 
 .silder img
 {
-    height: 300px;
+    height: 150px;
 }
 
 
 .footer
 {
-   height: 500px !important;
+   height: 700px !important;
    background-color: #093a86;
    color:white;
     
 }
 .leftfooter
 {
-    margin: -25px;
-   
-}
-.leftfooter img
-{
-    margin-left: -10px;
-    width:200px;
-    height:150px;
-}
-.middlefooter
-{
-    margin: -15px;
-   
+
 }
 
 .rightfooter
