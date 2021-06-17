@@ -13,17 +13,18 @@ body{
 {
     height: 90px;
     background-color:  #fe8b08;
-    justify-content: center;
-    text-align: center;
+
     color: #093a86;
     border-radius: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
     font-weight: bold;
+    text-align: center;
+    
 }
 .bar h3
 {
-    padding-top:15px;
+padding: 2rem;
 }
 
 
@@ -47,36 +48,7 @@ body{
     color: #fe8b08;
     font-weight: 500;
 }
-.footer
-{
-   height: 210px;
-   background-color: #093a86;
-   color:white;
-    
-}
-.leftfooter
-{
-    margin: auto;
-    padding-left: 100px;
-}
-.leftfooter img
-{
-    width:150px;
-    height: 100px;
-}
-.middlefooter
-{
-    margin: auto;
-    padding-left: 100px;
-}
-.middlefooter ul{
-    margin-left:30px;
-}
-.rightfooter
-{
-    margin-top:55px;;
-    padding-left: 100px;
-}
+
 
 @media(max-width: 800px)
 {

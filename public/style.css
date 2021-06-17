@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 *{
     padding: 0%;
     margin: 0%;
+    font-family: 'Prata', serif;
 }
 
 body{
@@ -13,10 +15,13 @@ body{
 {
    
     height: 125px;
-    background-color: #093a86 ;
     color: #ffffff;
-    
-
+    /* background-image: linear-gradient(to right, #2650a8, #374b9e, #424694, #49418b, #4e3c81); */
+    background-image: linear-gradient(to right, #3179e7, #415fb8, #3f488c, #353263, #261f3d);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;  
+    z-index: 10; 
 }
 .menu .left img
 {
@@ -25,25 +30,13 @@ body{
     height: 150px;
 
 }
-.item
-{
-    margin-left: 25rem;
-    margin-top:-4rem;
-    
-}
+
 .item .btn
 {
-    height:2.5rem;
-    
-}
-
-
-
-.item span
-{
-    color:#ffffff;
-    background-color: #ffffff;
-
+    height:2rem;
+    border: none;
+    margin-left: 8rem;
+    font-size: large;
 }
 .cmenu
 {
@@ -57,12 +50,15 @@ body{
 .main
 {
    margin-left: 40px;
-    background-color: blue;
+    background-color: white;
+    color: black;
     height: 200px;
     width: 95%;
-    margin-top: 60px;
+    margin-top: -90px;
     border-radius: 20px;
-    color:white;
+    /* z-index: -1; 
+    position: relative; */
+
 
 }
 .main .upper .icon
@@ -80,13 +76,17 @@ body{
 }
 .main .lower
 {
-    margin-left: 300px;
+    margin-left: 4rem;
 }
 .main .lower button
 {
    
     width: 150px; 
-    border-radius: 20px;
+    height: 2rem;
+    /* border-radius: 20px;SSSS */
+    color:white;
+    background-image: linear-gradient(to right, #3179e7, #415fb8, #3f488c, #353263, #261f3d);
+    
 }
 .main .lowersecond
 {
@@ -142,33 +142,18 @@ body{
 {
     margin-top: 10px;
 }
-.footer
-{
-   height: 210px;
-   background-color: #093a86;
-   color:white;
-    
-}
-.leftfooter
-{
-    margin: auto;
-    padding-left: 100px;
-}
-
-.rightfooter
-{
-    margin-top:55px;;
-    padding-left: 100px;
-}
-.rightfooter .fa
-{
-margin-left:10px;
-}
-
-
 .mainapp
 {
     margin-top: 1rem;
+}
+
+#footer
+{
+    background-color: rgb(49, 46, 46); 
+    color: cyan;
+}
+#footer ul{
+    color:white;
 }
 
 @media(max-width: 800px)
@@ -284,9 +269,9 @@ margin-left:10px;
    color:white;
     
 }
-.leftfooter
+.leftfooter h2
 {
-
+    margin-top: 0rem;
 }
 
 .rightfooter

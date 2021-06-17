@@ -1,5 +1,4 @@
 const express = require('express');
-var robots = require('robots.txt')
 const app = express();
 
 app.get('/', function (req, res) {
@@ -43,6 +42,12 @@ app.get('/', function (req, res) {
  
   app.get('/pop', function (req, res) {
     res.render('pop', {
+      title: "pop",
+    })
+  });
+ 
+  app.get('/table', function (req, res) {
+    res.render('table', {
       title: "pop",
     })
   });
